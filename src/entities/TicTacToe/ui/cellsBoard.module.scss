@@ -1,0 +1,61 @@
+.cellsBoard {
+  position: relative;
+  display: grid;
+  width: 100%;
+  min-width: 290px;
+  aspect-ratio: 1 / 1;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  background: #f0f2f5;
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    background: rgba(240, 242, 245, 0);
+    transition: background-color .3s;
+    pointer-events: none;
+  }
+}
+
+.disabled {
+  pointer-events: none;
+  &::after {
+    background: rgba(240, 242, 245, .7);
+  }
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+  border: 1px solid gray;
+  cursor: pointer;
+  background: rgb(240, 242, 245);
+  transition: background-color .2s;
+
+  &:hover {
+    background: rgb(236 236 236);
+  }
+
+  &Cross {
+    width: 50%;
+    height: 50%;
+
+    & svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.icon {
+  width: 50%;
+  height: 50%;
+}
+

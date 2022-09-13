@@ -1,0 +1,17 @@
+.header {
+  display: flex;
+  height: 100%;
+  padding: 16px 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  color: white;
+}
+
+.gameBar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}

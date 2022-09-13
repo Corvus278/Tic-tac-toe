@@ -1,0 +1,10 @@
+{
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "no-restricted-imports": ["error", {
+      "name": "react-redux",
+      "importNames": ["useDispatch", "useSelector"],
+      "message": "Please use the useAppDispatch and useAppSelector"
+    }]
+  }
+}
