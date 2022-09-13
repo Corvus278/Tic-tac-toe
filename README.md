@@ -9,3 +9,20 @@
 Игра полонстью адаптирована под мобильные телефоны
 
 ![img.png](img.png)
+
+## Запуск
+### Пакетный менеджер
+```
+npm run build 
+```
+```
+npm run start
+```
+
+### Docker
+```
+docker build . -t tic-tac-toe
+```
+```
+docker run -p 3000:3000 tic-tac-toe
+```
