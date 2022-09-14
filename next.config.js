@@ -3,7 +3,7 @@
 const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig = {
-  assetPrefix: isProd ? "/your-github-repo-name/" : "",
+  assetPrefix: isProd ? "/Tic-tac-toe/" : "",
   images: {
     unoptimized: true,
   },
