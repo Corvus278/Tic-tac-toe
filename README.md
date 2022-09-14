@@ -1,5 +1,6 @@
 # Крестики-Нолики
-Игра крестики-нолики, написана на React (Next.js) + TypeScript + Ant.d + RTK + Featured-sliced Design.
+Игра крестики-нолики, написана на React (Next.js) + TypeScript + Ant.d + RTK + Featured-sliced Design.  
+**Поиграть можно [здесь](https://corvus278.github.io/Tic-tac-toe/)**
 
 ## Функциональность
 - выбор стороны (крестики/нолики)
