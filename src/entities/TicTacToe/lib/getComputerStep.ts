@@ -33,14 +33,12 @@ export const getComputerStep = (
   // Check computer prev-winner combinations
   for (const comb of winnerCombinations) {
     const step = checkPrevwinnerComb(cells, comb, computerRole);
-    debugger;
     if (step !== null) return step;
   }
 
   // Check user prev-winner combinations
   for (const comb of winnerCombinations) {
     const step = checkPrevwinnerComb(cells, comb, userRole);
-    debugger;
     if (step !== null) return step;
   }
 
@@ -82,7 +80,7 @@ function checkPrevwinnerComb(cells: ICell[], comb: number[], role: ERoles) {
     cells[comb[2]].owner === null &&
     cells[comb[0]].owner === role
   ) {
-    // debugger;
+    // ;
     return comb[2];
   } else if (
     cells[comb[1]].owner === cells[comb[2]].owner &&
