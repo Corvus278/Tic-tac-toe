@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import { ticTacToeModel } from "entities/TicTacToe";
 import { useAppSelector } from "../../../shared/lib/redux";
 import { gameEvent } from "../model/gameEvent";
@@ -9,7 +9,9 @@ export const GameEvents: FC = () => {
   const { winner } = useAppSelector(
     ticTacToeModel.gameStatus.selectors.gameStatus
   );
-  if (dispatch(gameEvent(winner)) === null) return <></>;
+  useEffect(() => {
+    dispatch(gameEvent(winner));
+  }, [winner, dispatch]);
 
   return <></>;
 };

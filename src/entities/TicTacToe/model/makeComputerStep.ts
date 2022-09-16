@@ -6,7 +6,11 @@ import { makeStep } from "./makeStep";
 
 export const makeComputerStep = (): ThunkActionType => {
   return (dispatch, getState) => {
-    const computerStep = getComputerStep(cells.selectors.getCells(getState()));
+    const computerStep = getComputerStep(
+      cells.selectors.getCells(getState()),
+      roles.selectors.getUserRole(getState()),
+      roles.selectors.getComputerRole(getState())
+    );
     dispatch(
       makeStep({
         cellIndex: computerStep,
